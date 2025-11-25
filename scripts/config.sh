@@ -25,8 +25,10 @@ cat >/home/$USER_NAME/.bash_profile <<'EOF'
 # CabinetOS auto-launch·
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
   clear
-  /opt/CoinClock/CoinClock
+  cd /opt/CoinClock
+  ./CoinClock
 fi
+EOF
 chown "$USER_NAME:$USER_NAME" /home/$USER_NAME/.bash_profile
 
 # --- Enable core services ---
