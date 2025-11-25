@@ -40,6 +40,7 @@ DEST_DIR="/home/cabinet/ROMs"
 echo "[2/3] Setting up ROM directories..."
 
 # Create destination if missing
+mkdir -p "$SRC_DIR"
 mkdir -p "$DEST_DIR"
 
 # Copy contents recursively, preserving permissions
@@ -49,5 +50,12 @@ cp -rT "$SRC_DIR" "$DEST_DIR"
 chown -R cabinet:cabinet "$DEST_DIR"
 
 echo "ROM directories copied from $SRC_DIR to $DEST_DIR."
+
+# --- Enable services ---
+sudo systemctl enable --now sshd
+
+echo "SSH Enabled. IP address information:"
+ip addr show
+echo ""
 
 echo "[2/3] Configuration complete. System will autologin as '$USER_NAME' and start EmulationStation on tty1."

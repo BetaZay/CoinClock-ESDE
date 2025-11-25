@@ -10,6 +10,7 @@ fi
 
 PKGS=(
   base-devel
+  openssh
   dbus
   git
   curl
