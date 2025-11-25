@@ -25,6 +25,7 @@ install -m 755 build-release/CoinClock /opt/CoinClock/CoinClock
 # Assets need -r, always
 rm -rf /opt/CoinClock/assets
 cp -r build-release/assets /opt/CoinClock/assets
+mkdir -p /opt/CoinClock/assets/attract
 
 echo "=== Install Complete ==="
 echo "Run with: /opt/CoinClock/CoinClock"
