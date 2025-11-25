@@ -1,0 +1,22 @@
+`archinstall`
+select region
+repos:
+    + multilib
+disk config:
+    best effort
+    ext4
+bootloader:
+    systemd
+auth:
+    + root password
+    no user
+profile:
+    minimal
+applications:
+    audio: pulseaudio
+kernal:
+    linux-lts
+network:
+    copy config from iso
+packages:
+    git, curl, wget
