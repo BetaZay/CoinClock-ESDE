@@ -28,5 +28,8 @@ sudo -u "$USER_NAME" bash "${SCRIPT_DIR}/scripts/packages.sh"
 # --- Step 2: System configuration (autologin etc.) ---
 sudo bash "${SCRIPT_DIR}/scripts/config.sh"
 
+# --- Step 3: Install CoinClock application ---
+sudo bash "${SCRIPT_DIR}/scripts/install-coin-clock.sh"
+
 echo "=== CabinetOS installation complete ==="
 echo "Reboot to start the system."
